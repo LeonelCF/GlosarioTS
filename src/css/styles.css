@@ -1,0 +1,141 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7f9;
+}
+
+header {
+    background-color: #35c99d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    /* justify-content: space-between;
+    max-width: 1200px; */
+    margin: 10px 10%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del panel izquierdo (lista de palabras) */
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+#wordList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: 79vh;
+    overflow-y: scroll;
+}
+
+#wordList li {
+    margin-bottom: 6px;
+    border-left: 5px solid #35c99d;
+    padding-left: 10px;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+#wordList a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 3px;
+    display: block;
+    /* background-color: red; */
+}
+
+#wordList li:hover {
+    background-color: #35c99d;
+    /* background-color: #f0f0f0; */
+}
+
+
+/* Estilos del panel derecho (búsqueda y definición) */
+.right-panel {
+    flex: 2;
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 18px;
+    border: 2px solid #35c99d;
+    border-radius: 12px;
+    /* outline: red; */
+    outline-color: cornflowerblue;
+}
+
+#definitionArea {
+    border: 2px solid #e0e0e0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* min-height: 200px; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* text-align: justify; */
+}
+#definitionArea h2{
+    margin-bottom: 4px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer .info {
+    margin: auto 10%;
+    text-align: right;
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+/* Estilos para pantallas más pequeñas (dispositivos móviles) */
+@media only screen and (max-width: 70mm) {
+    /* Modifica el estilo de tus elementos para pantallas pequeñas */
+    body {
+      font-size: 12px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    }
+    #wordList a {
+        font-size: 12px;
+    }
+
+    main {
+        margin: 10px auto;
+    }
+    footer .info {
+        margin: auto auto;
+        font-size: 10px;
+    }
+    /* Otros ajustes de estilo según necesites */
+  }
+  

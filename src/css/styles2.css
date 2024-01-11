@@ -1,0 +1,176 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f7f9;
+}
+
+header {
+    background-color: #35c99d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    /* justify-content: space-between;
+    max-width: 1200px; */
+    margin: 5px 10%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del panel izquierdo (lista de palabras) */
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #e0e0e0;
+}
+
+#wordList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: 77vh;
+    overflow-y: scroll;
+}
+
+#wordList li {
+    margin-bottom: 6px;
+    border-left: 5px solid #35c99d;
+    padding-left: 10px;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+#wordList a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 3px;
+    display: block;
+    /* background-color: red; */
+}
+
+#wordList li:hover {
+    background-color: #35c99d;
+    /* background-color: #f0f0f0; */
+}
+
+
+/* Estilos del panel derecho (búsqueda y definición) */
+.right-panel {
+    flex: 2;
+}
+
+
+
+#searchInput {
+    width: 100%;
+    padding: 8px 15px;
+    border: 2px solid #35c99d;
+    border-radius: 12px;
+    /* outline: red; */
+    outline-color: cornflowerblue;
+    display: flex;
+    /* margin: 10px 10px; */
+}
+
+#definitionArea {
+}
+
+.search-container{
+    padding: 20px;
+}
+._def {
+    padding: 0px 20px 20px 20px;
+}
+
+.def {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+#definitionArea h2{
+    margin-bottom: 4px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f6f7f9;
+    padding: 10px;
+}
+footer .info {
+    margin: auto 10%;
+    text-align: right;
+    padding: 0 20px;
+    font-size: 10px;
+}
+
+/* Estilos para pantallas más pequeñas (dispositivos móviles) */
+@media only screen and (max-width: 600px) {
+    /* Modifica el estilo de tus elementos para pantallas pequeñas */
+    h1, h2 {
+        font-size: 16px;
+    }
+    #wordList a,.def, #searchInput {
+        font-size: 14px;
+    }
+    #wordList a {
+        /* font-size: 12px; */
+    }
+
+    footer .info {
+        margin: auto auto;
+        font-size: 10px;
+    }
+    main {
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .left-panel {
+        flex: 1;
+        padding: 0 20px;
+        border-right: 1px solid #e0e0e0;
+    }
+    
+    #wordList {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: unset;
+        max-height: inherit;
+    }
+      
+  }
+  
+  @media only screen and (max-width: 250px) {
+    h1, h2 {
+        font-size: 14px;
+    }
+    #wordList a, .def, #searchInput {
+        font-size: 12px;
+    }
+    footer .info {
+        font-size: 8px;
+    }
+  }
